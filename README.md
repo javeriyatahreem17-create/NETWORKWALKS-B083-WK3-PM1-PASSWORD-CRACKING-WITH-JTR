@@ -155,49 +155,51 @@ The purpose of this method was to understand that password recovery can also be 
 
 # What I Learned:-
 
-This practical gave me hands-on experience with password security and offline password-cracking concepts.
-**
-1. Understanding Password Hashes**
 
-I learned that password-protected files can contain information that allows security tools to perform password-recovery attempts without directly accessing the original password.
+This practical gave me a better understanding of how password recovery actually works in a cybersecurity environment.
 
-I also understood that the extracted hash has to be maintained in the correct format for the cracking tool to process it.
+## 1. Understanding the Password-Recovery Workflow
 
-**
-2. Working with John the Ripper**
+I learned that password cracking is not simply about entering random passwords. There is a complete process involved, starting from extracting the required information from the protected file and then supplying it to a suitable cracking tool.
 
-I learned the basic workflow of using John the Ripper for password recovery.
+---
 
-This included preparing a hash, loading it into the tool, selecting a wordlist, starting the attack, and checking the result.
+## 2. Understanding PDF Hash Extraction
 
-**3. Understanding Wordlists
-**
-I learned that wordlists contain possible password candidates and are commonly used during dictionary-based password attacks.
+I learned how a password-protected PDF can be processed to obtain hash information that can be understood by password-cracking utilities.
 
-The effectiveness of this type of attack depends heavily on whether the target password appears in the selected wordlist or matches the patterns being tested.
-**
-4. Using Johnny**
+This helped me understand the connection between the original protected document and the cracking tool.
 
-I also learned how Johnny provides a graphical way of interacting with John the Ripper.
+---
 
-It made it easier to observe the cracking process and understand what the tool was doing during an attack.
+## 3. Difference Between Offline and Web-Based Approaches
 
-**5. Password Strength**
+Working with both John the Ripper and NETWORKWALKS helped me understand the difference between local and web-based password-recovery workflows.
 
-The practical showed me how passwords based on common words or predictable patterns can be more vulnerable to password-cracking techniques.
+John the Ripper performs the cracking process on the local machine, while NETWORKWALKS provides a browser-based approach.
 
-This reinforced the importance of using stronger and less predictable passwords.
+---
 
-**6. Importance of Correct Hash Formatting**
+## 4. Importance of the Correct Hash Format
 
-I learned that the complete hash needs to be copied correctly.
+I learned that the extracted hash needs to remain in the correct format.
+
+Even a small mistake while copying or modifying the hash can cause the cracking tool to reject it or fail to process it correctly.
+
+---
+
+## 5. Password Strength Matters
+
+The practical also showed me why simple and predictable passwords can be vulnerable to password-cracking techniques.
+
+A password that appears difficult to guess manually may still be discovered if it is present in a commonly used wordlist.
+
 
 If characters are missing, changed, or incorrectly formatted, John the Ripper may fail to recognize or process the hash.
 
 
 # Issues Faced During the Project:- 
-**
-1. Difficulty Locating the John Executable**
+**1. Difficulty Locating the John Executable**
 
 While setting up John the Ripper on Windows, I initially had difficulty locating the required john.exe file inside the extracted installation folders.
 
@@ -205,15 +207,15 @@ The problem was related to identifying the correct directory containing the exec
 
 After checking the extracted folders and reinstalling the required files, I was able to locate the correct John installation directory.
 
-**2. Hash Recognition
-**
+**2. Hash Recognition**
+
 Another issue was making sure that the extracted PDF hash was copied correctly.
 
 A hash that is incomplete or incorrectly formatted may not be recognized properly by John the Ripper.
 
 Checking the complete extracted value and saving it correctly helped resolve the issue.
-**
-3. Wordlist Selection**
+
+**3. Wordlist Selection**
 
 The cracking process also depends on the wordlist being used.
 
