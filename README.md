@@ -1,4 +1,4 @@
-# NETWORKWALKS-B083-WK3-PM1-PASSWORD-CRACKING-WITH-JTR-Public
+# NETWORKWALKS-B083-WK3-PM1-PASSWORD-CRACKING-WITH-JTR
 #### Password Cracking & PDF Hash Analysis — John the Ripper
 
 # 📌 Project Overview
